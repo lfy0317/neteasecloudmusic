@@ -2,6 +2,7 @@ import React from 'react';
 import ReactDOM from 'react-dom';
 import './assets/css/default/index.css';
 import './assets/css/default/common.css';
+import './assets/css/icon/iconfont.css'
 import App from './App';
 import * as serviceWorker from './serviceWorker';
 import axios from 'axios';
