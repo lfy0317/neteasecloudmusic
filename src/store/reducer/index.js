@@ -1,5 +1,5 @@
 import {combineReducers} from 'redux';
-import initState from './init'
+import loginState from './login'
 export default combineReducers({
-    initState  
+    loginState
 })

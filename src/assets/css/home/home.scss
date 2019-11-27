@@ -1,0 +1,10 @@
+@import '~antd/dist/antd.css';
+.ant-tabs-bar{
+    border: none;
+}
+.ant-tabs-nav .ant-tabs-tab-active{
+    color: #f00!important;
+}
+.ant-tabs-ink-bar{
+    height: 0;
+}

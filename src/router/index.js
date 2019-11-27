@@ -1,5 +1,6 @@
 import Home from '../views/Home';
-import GoLogin from '../views/GoLogin'
+import GoLogin from '../views/GoLogin';
+import Login from '../views/Login'
 export default[
     {
         name:'home',
@@ -11,5 +12,10 @@ export default[
         name:'gologin',
         to:'/gologin',
         component:GoLogin
+    },
+    {
+        name:'login',
+        to:'/login',
+        component:Login
     }
 ]
