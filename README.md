@@ -1,2 +1,0 @@
-# neteasecloudmusic
-react.js-neteasecloudmusic
