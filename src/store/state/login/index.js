@@ -1,6 +1,6 @@
 export default {
     isAgree:false,
-    exist:null,
+    exist:0,
     nickname:"",
     hasPassword:false
 }

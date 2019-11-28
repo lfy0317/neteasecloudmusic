@@ -44,7 +44,6 @@ export default {
                                 }
                             })
                         }
-                        //{exist: 2, nickname: "许我三千笔墨画你绝世倾城180619", hasPassword: false, code: 200}
                     }else{
                         Toast.info(data.message);
                     }
