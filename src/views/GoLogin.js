@@ -4,13 +4,14 @@ import {Link} from 'react-router-dom';
 import { connect } from 'react-redux';
 import {bindActionCreators} from 'redux'
 import actionCreator from '../store/actionCreator/login';
+import { Toast } from 'antd-mobile'
 
 class GoLogin extends React.Component{
     render(){
         return(
-            <div className='login'>
+            <div className='gologin'>
                 <span>&times;</span>
-                <div className='login-logo'>
+                <div className='gologin-logo'>
                     {/* img elements must have an alt prop, either with meaningful text, 
                         or an empty string for decorative images.eslint(jsx-a11y/alt-text) */}
                     {/* <img src={require('../assets/images/login-logo.png')} alt="图片加载中..."/> */}
@@ -20,7 +21,7 @@ class GoLogin extends React.Component{
                     <Link
                         className='phone-login'
                         to={this.props.isAgree ? { pathname: '/login', state: { type: 1 } } : '/gologin'}
-                        >
+                        onClick={this.showToast.bind(this)}>
                         手机号登录</Link>
                     <ul className='third-party-login'>
                         <Link to={'/gologin'} className="li">
@@ -46,6 +47,10 @@ class GoLogin extends React.Component{
                 </div>
             </div>
         )
+    }
+    showToast() {
+        if(!this.props.isAgree)
+            Toast.info('请先勾选同意《服务条款》、《隐私政策》和《儿童隐私服务政策》');
     }
 }
 function mapStateToProps({ loginState }) {
