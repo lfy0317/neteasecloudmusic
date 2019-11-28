@@ -19,7 +19,7 @@ class GoLogin extends React.Component{
                 <div className='go-login'>
                     <Link
                         className='phone-login'
-                        to={this.props.isAgree ? { pathname: '/login', query: { type: 1 } } : '/gologin'}
+                        to={this.props.isAgree ? { pathname: '/login', state: { type: 1 } } : '/gologin'}
                         >
                         手机号登录</Link>
                     <ul className='third-party-login'>
@@ -30,7 +30,7 @@ class GoLogin extends React.Component{
                         <Link to={'/gologin'} className="li">
                             <i className='iconfont'>&#xe647;</i></Link>
                         <Link
-                            to={this.props.isAgree ? { pathname: '/login', query: { type: 5 } } : '/gologin'}
+                            to={this.props.isAgree ? { pathname: '/login', state: { type: 5 } } : '/gologin'}
                             className="li">
                             <i className='iconfont'>&#xe644;</i>
                         </Link>
