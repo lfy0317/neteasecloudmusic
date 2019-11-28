@@ -1,7 +1,11 @@
 import React from 'react';
 import '../assets/css/login/login.scss';
 import { NavBar, Icon } from 'antd-mobile';
-import Controlphone from '../components/login/Controlphone'
+import Controlphone from '../components/login/Controlphone';
+import {connect} from 'react-redux';
+import {bindActionCreators} from 'redux';
+import actionCreator from '../store/actionCreator/login';
+import Passwordlogin from '../components/login/Passwordlogin'
 class Login extends React.Component {
     render() {
         return (
@@ -12,12 +16,15 @@ class Login extends React.Component {
                     onLeftClick={() => this.props.history.push('/gologin')}>
                     {this.props.location.state.type === 1 ? '手机登录' : '网易账号登录'}
                 </NavBar>
-                <Controlphone></Controlphone>
+                {this.props.exist !== null?<Controlphone></Controlphone>:<Passwordlogin></Passwordlogin>}
             </div>
         )
     }
-    componentDidMount() {
-        console.log(this.props)
-    }
 }
-export default Login
+function mapStateToProps({ loginState }) {
+    return {}
+}
+function mapDispatchToProps(dispatch) {
+    return bindActionCreators(actionCreator,dispatch)
+}
+export default connect(mapStateToProps,mapDispatchToProps)(Login)
