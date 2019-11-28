@@ -1,0 +1,67 @@
+@import '~antd/dist/antd.css';
+.index{
+    display:flex;
+    .tabText{
+        display: flex;
+        align-items: center;
+        justify-content: center; 
+    }
+}
+//吸顶
+.am-tabs-tab-bar-wrap{
+    height:0.54rem;
+}
+.am-tabs-default-bar-top{
+    height:0.54rem;
+    width:68%;
+    position:fixed;
+    left:16%   
+}
+.dmenu{
+    // width:16%;
+    width: 100%;
+    height:0.54rem;
+    position: absolute;
+    top:0;
+    left:0;
+    
+   
+   
+    
+    
+
+}
+.search{
+    height:0.54rem;
+    width:16%;
+    position: fixed;
+    top:0;
+    right:0;
+    background:#ffffff;
+    i{
+        line-height: 0.54rem;
+    }
+}
+
+//原字体
+.am-tabs-default-bar-tab{
+    font-size:14px;
+    height:0.54rem;
+    
+    
+    
+}
+
+// //target字体
+.am-tabs-default-bar-tab-active{
+    color:#000000;
+    font-size:16px
+}
+.am-tabs-default-bar-underline{
+    border:none
+}
+.box{
+    height:1000px;
+    background: red;
+}
+
