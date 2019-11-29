@@ -8,7 +8,6 @@ class Dmenu extends React.Component {
     open: false,
   }
   onOpenChange = (...args) => {
-    console.log(args);
     this.setState({ open: !this.state.open });
   }
   render() {
@@ -27,19 +26,22 @@ class Dmenu extends React.Component {
       })}
     </List>);
 
-    return (<div>
-      <NavBar icon={<Icon type="ellipsis" />} onLeftClick={this.onOpenChange}></NavBar>
-      <Drawer
-        className="my-drawer"
-        style={{ minHeight: document.documentElement.clientHeight }}
-        contentStyle={{ color: '#A6A6A6', textAlign: 'center', paddingTop: 42 }}
-        sidebar={sidebar}
-        open={this.state.open}
-        onOpenChange={this.onOpenChange}
-      >
-        Click upper-left corner
-      </Drawer>
-    </div>);
+    return (
+      <div>
+        <div className="demun_top">
+        <NavBar icon={<i className="iconfont icon-caidan"></i>} onLeftClick={this.onOpenChange}></NavBar>
+        </div>
+        <Drawer
+          className="my-drawer"
+          style={{ minHeight: document.documentElement.clientHeight }}
+          contentStyle={{ color: '#A6A6A6', textAlign: 'center', paddingTop: 42 }}
+          sidebar={sidebar}
+          open={this.state.open}
+          onOpenChange={this.onOpenChange}
+        >
+          <div></div>
+        </Drawer>
+      </div>);
   }
 }
 export default Dmenu
