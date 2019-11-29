@@ -39,7 +39,7 @@ class Controlphone extends React.Component{
                 </List>
                 <WhiteSpace/>
                 <Button type='warning' disabled={this.state.hasError} 
-                onClick={this.props.login.bind(this,Toast)}>下一步</Button>
+                onClick={this.props.goLogin.bind(this,Toast)}>下一步</Button>
             </div>
         )
     }

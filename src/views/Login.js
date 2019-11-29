@@ -16,12 +16,9 @@ class Login extends React.Component {
                     onLeftClick={() => this.props.history.push('/gologin')}>
                     {this.props.location.state.type === 1 ? '手机登录' : '网易账号登录'}
                 </NavBar>
-                {this.props.exist !== 0?<Controlphone></Controlphone>:<Passwordlogin></Passwordlogin>}
+                {this.props.exist === 0?<Controlphone></Controlphone>:<Passwordlogin></Passwordlogin>}
             </div>
         )
-    }
-    componentDidMount(){
-        console.log(this.props)
     }
 }
 function mapStateToProps({ loginState }) {

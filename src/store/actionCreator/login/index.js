@@ -20,7 +20,7 @@ export default {
             }).catch(()=>Toast.info("请求失败"))
         }
     },
-    login(Toast){
+    goLogin(Toast){
         const code = this.refs.code.state.value/1;
         let phone = this.refs.phone.state.value;
         phone = phone.replace(/\s*/g,'')/1;
@@ -40,7 +40,8 @@ export default {
                                 payload:{
                                     exist:data.exist,
                                     nickname:data.nickname,
-                                    hasPassword:data.hasPassword
+                                    hasPassword:data.hasPassword,
+                                    phone,
                                 }
                             })
                         }
@@ -50,6 +51,20 @@ export default {
                 })
                 .catch(()=>Toast.info("验证码错误"))
             }
+        }
+    },
+    login(){
+        const password = this.refs.password.state.value;
+        let phone = this.props.phone;
+        console.log(password)
+        return(dispatch)=>{
+            this.$axios.get('/login/cellphone?phone='+phone+'&password='+password)
+            .then(data=>{
+                console.log(data)
+            })
+            .catch(data=>{
+                console.log(data)
+            })
         }
     }
 }

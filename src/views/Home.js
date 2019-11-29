@@ -15,32 +15,25 @@ const tabs = [
 class Home extends React.Component{
     render(){
         return (
-            
             <div className='index'>
-                
                 <div className="dmenu">
                     <Dmenu></Dmenu>
                 </div>
-               
-                <Tabs tabs={tabs} initialPage={0} >
-                
-                <div className="tabText" >
-                   <div className="box">lal</div>
-                </div>
-                <div className="tabText">
-                    Content of second tab
-                </div>
-                <div className="tabText">
-                    Content of third tab
-                </div>
-                <div className="tabText">nihao</div>
+                <Tabs tabs={tabs} initialPage={0}>
+                    <div className="tabText" >
+                    <div className="box">lal</div>
+                    </div>
+                    <div className="tabText">
+                        Content of second tab
+                    </div>
+                    <div className="tabText">
+                        Content of third tab
+                    </div>
+                    <div className="tabText">nihao</div>
                 </Tabs>
-                
                 <div className="search">
                     <i className="iconfont ">vbvb </i>
                 </div>
-
-                {/* <WhiteSpace /> 空白符 */}
             </div>
         )
     }

@@ -6,7 +6,9 @@ export default function(state = loginState,{type,payload}){
     }else if(type === 'CHANGE_EXIST'){
         state.exist = payload.exist;
         state.nickname = payload.nickname;
-        state.hasPassword = payload.hasPassword
+        state.hasPassword = payload.hasPassword;
+        state.phone = payload.phone
     }
+    console.log(state)
     return state;
 }
