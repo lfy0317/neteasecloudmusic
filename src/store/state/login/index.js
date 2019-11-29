@@ -1,6 +1,6 @@
 export default {
     isAgree:false,
-    phone:null,
+    phone:15535336269,
     exist:0,
     nickname:"",
     hasPassword:false

@@ -25,9 +25,9 @@ class Controlphone extends React.Component{
     render(){
         return(
             <div className='controlphone'>
-                <WhiteSpace/>
+                <WhiteSpace />
                 <p className='phone-tit'>未注册手机号登录后将自动创建账号</p>
-                <WhiteSpace/>
+                <WhiteSpace />
                 <List style={{position:'relative'}}>
                     <InputItem type='phone' placeholder='请输入手机号'
                     error={this.state.hasError}

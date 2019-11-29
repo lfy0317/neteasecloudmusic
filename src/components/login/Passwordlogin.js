@@ -35,7 +35,7 @@ class Passwordlogin extends React.Component {
                 <WhiteSpace />
                 <Button type='warning' disabled={this.state.hasError}
                     style={{ height: '.45rem', lineHeight: '.45rem' }}
-                    onClick={this.props.login.bind(this)}>登录</Button>
+                    onClick={this.props.login.bind(this,Toast)}>登录</Button>
             </div>
         )
     }

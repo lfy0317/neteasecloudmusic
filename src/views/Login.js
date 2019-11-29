@@ -10,13 +10,15 @@ class Login extends React.Component {
     render() {
         return (
             <div className='login'>
+                <div className='nav'>
                 <NavBar
                     mode="light"
                     icon={<Icon type="left" style={{ color: "#000" }} />}
                     onLeftClick={() => this.props.history.push('/gologin')}>
                     {this.props.location.state.type === 1 ? '手机登录' : '网易账号登录'}
                 </NavBar>
-                {this.props.exist === 0?<Controlphone></Controlphone>:<Passwordlogin></Passwordlogin>}
+                </div>
+                {this.props.exist !== 0?<Controlphone></Controlphone>:<Passwordlogin router={this}></Passwordlogin>}
             </div>
         )
     }

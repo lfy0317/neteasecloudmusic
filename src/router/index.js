@@ -1,6 +1,6 @@
 import Home from '../views/Home';
 import GoLogin from '../views/GoLogin';
-import Login from '../views/Login'
+import Login from '../views/Login';
 export default[
     {
         name:'home',

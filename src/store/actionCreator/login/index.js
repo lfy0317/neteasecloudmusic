@@ -53,17 +53,19 @@ export default {
             }
         }
     },
-    login(){
+    login(Toast){
         const password = this.refs.password.state.value;
         let phone = this.props.phone;
         console.log(password)
         return(dispatch)=>{
             this.$axios.get('/login/cellphone?phone='+phone+'&password='+password)
             .then(data=>{
-                console.log(data)
+                if(data.code === 200){
+                    this.props.router.props.history.push('/')
+                }else{Toast.info("账号密码错误")}
             })
-            .catch(data=>{
-                console.log(data)
+            .catch(()=>{
+                Toast.info("账号密码错误")
             })
         }
     }

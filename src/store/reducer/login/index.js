@@ -9,6 +9,5 @@ export default function(state = loginState,{type,payload}){
         state.hasPassword = payload.hasPassword;
         state.phone = payload.phone
     }
-    console.log(state)
     return state;
 }
