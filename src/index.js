@@ -11,6 +11,7 @@ import {Provider} from 'react-redux';
 import store from './store';
 
 React.Component.prototype.$axios = axios;
+axios.defaults.withCredentials = true;
 axios.interceptors.request.use((config)=>{
     config.url = '/cm'+config.url;
     return config;

@@ -63,7 +63,7 @@ class Tabbar extends React.Component {
                 selectedTab: 'Tab',
               });
             }}
-          ><Account></Account>
+          ><Account router={this.props.router}></Account>
           </TabBar.Item>
         </TabBar>
       </div>
