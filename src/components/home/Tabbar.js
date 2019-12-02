@@ -4,7 +4,6 @@ import { TabBar } from 'antd-mobile';
 import Discover from '../../views/Discover';
 import Movie from '../../views/Movie';
 import Mine from '../../views/Mine';
-import Yuncun from '../../views/Yuncun';
 import Account from '../../views/Account'
 
 class Tabbar extends React.Component {
@@ -21,7 +20,7 @@ class Tabbar extends React.Component {
       <div style={{ position: 'fixed', height: '100%', width: '100%', top: 0 }}>
         <TabBar tintColor="red" hidden={this.state.hidden}>
           <TabBar.Item
-            title="发现"
+            title="首页"
             icon={<i className='iconfont icon-logo-dark'></i>}
             selectedIcon={<i className='iconfont icon-logo-dark'></i>}
             selected={this.state.selectedTab === 'blueTab'}
@@ -32,9 +31,9 @@ class Tabbar extends React.Component {
             }}><Discover></Discover>
           </TabBar.Item>
           <TabBar.Item
-            icon={<i className='iconfont icon-xiadaohangtubiaojihe-xingzhuang_tab_ico_-'></i>}
-            selectedIcon={<i className='iconfont icon-xiadaohangtubiaojihe-xingzhuang_tab_ico_-'></i>}
-            title="视频"
+            icon={<i className='iconfont icon-iconfontttpodicon3'></i>}
+            selectedIcon={<i className='iconfont icon-iconfontttpodicon3'></i>}
+            title="热歌"
             selected={this.state.selectedTab === 'redTab'}
             onPress={() => {
               this.setState({
@@ -53,18 +52,6 @@ class Tabbar extends React.Component {
               });
             }}
           ><Mine></Mine>
-          </TabBar.Item>
-          <TabBar.Item
-            icon={<i className='iconfont icon-women'></i>}
-            selectedIcon={<i className='iconfont icon-women'></i>}
-            title="云村"
-            selected={this.state.selectedTab === 'yellowTab'}
-            onPress={() => {
-              this.setState({
-                selectedTab: 'yellowTab',
-              });
-            }}
-          ><Yuncun></Yuncun>
           </TabBar.Item>
           <TabBar.Item
             icon={<i className='iconfont icon-user2-copy'></i>}

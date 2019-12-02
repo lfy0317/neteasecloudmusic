@@ -18,7 +18,7 @@ class Login extends React.Component {
                     {this.props.location.state.type === 1 ? '手机登录' : '网易账号登录'}
                 </NavBar>
                 </div>
-                {this.props.exist !== 0?<Controlphone></Controlphone>:<Passwordlogin router={this}></Passwordlogin>}
+                {this.props.exist === 0?<Controlphone></Controlphone>:<Passwordlogin router={this}></Passwordlogin>}
             </div>
         )
     }

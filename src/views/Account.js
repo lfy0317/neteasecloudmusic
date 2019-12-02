@@ -1,10 +1,10 @@
 import React from 'react';
-import { NavBar, Button } from 'antd-mobile';
+import { NavBar, Button, WhiteSpace, } from 'antd-mobile';
 class Account extends React.Component{
     render(){
         return(
             <div className='account'>
-                <div className='nav' style={{position:"fixed",width:'100%'}}>
+                <div className='nav' style={{position:"fixed",width:'100%',zIndex:'1'}}>
                     <NavBar style={{background:'#fff',height:'.4rem',color:'#000'}} 
                     icon={<i className="iconfont icon-saoyisao" style={{fontSize:'.2rem'}}></i>}>账号</NavBar>
                 </div>
@@ -28,6 +28,33 @@ class Account extends React.Component{
                         justifyContent:'center',borderLeft:'.01rem solid #ffe9e5',width:'1.73rem'}}>
                             <p>会员中心</p>
                             <span>VIP超享12项特权</span>
+                        </div>
+                    </div>
+                    <div>
+                        <ul style={{height:'.88rem',display:'flex',justifyContent:'space-around',
+                    alignItems:'center',borderTop:'.01rem solid #f2f2f2'}}>
+                            <li style={{display:'flex',flexDirection:'column',fontSize:'.12rem'}}>
+                                <i className='iconfont icon-xinxi' style={{fontSize:'.22rem',color:'#ef726c'}}></i>
+                                <span>消息</span>
+                            </li>
+                            <li style={{display:'flex',flexDirection:'column',fontSize:'.12rem'}}>
+                                <i className='iconfont icon-erji' style={{fontSize:'.22rem',color:'#ef726c'}}></i>
+                                <span>商城</span>
+                            </li>
+                            <li style={{display:'flex',flexDirection:'column',fontSize:'.12rem'}}>
+                                <i className='iconfont icon-yule' style={{fontSize:'.22rem',color:'#ef726c'}}></i>
+                                <span>演出</span>
+                            </li>
+                            <li style={{display:'flex',flexDirection:'column',fontSize:'.12rem'}}>
+                                <i className='iconfont icon-yifu' style={{fontSize:'.22rem',color:'#ef726c'}}></i>
+                                <span>个性装扮</span>
+                            </li>
+                        </ul>
+                    </div>
+                    <div style={{backgroundColor:'#f8f8f8'}}>
+                        <WhiteSpace/>
+                        <div>
+                            
                         </div>
                     </div>
                 </div>
