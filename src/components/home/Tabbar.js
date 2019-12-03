@@ -39,7 +39,7 @@ class Tabbar extends React.Component {
               this.setState({
                 selectedTab: 'redTab',
               });
-            }}><Movie></Movie>
+            }}><HotMusic></HotMusic>
           </TabBar.Item>
           <TabBar.Item
             icon={<i className='iconfont icon-yinyue1'></i>}
