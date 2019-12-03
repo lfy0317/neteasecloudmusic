@@ -1,17 +1,11 @@
 import {combineReducers} from 'redux';
-<<<<<<< Updated upstream
 import loginState from './login';
 import searchState from './search';
-import mineState from './mine'
-export default combineReducers({
-    loginState,
-    searchState,
-    mineState
-=======
-import loginState from './login'
+import mineState from './mine';
 import discoverReducer from "./discover"
 export default combineReducers({
     loginState,
+    searchState,
+    mineState,
     discoverReducer
->>>>>>> Stashed changes
 })
