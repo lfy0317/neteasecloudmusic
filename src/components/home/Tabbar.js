@@ -2,7 +2,7 @@
 import React from 'react';
 import { TabBar } from 'antd-mobile';
 import Discover from '../../views/Discover';
-import HotMusic from '../../views/Movie';
+import HotMusic from '../../views/HotMusic';
 import Mine from '../../views/Mine';
 import Account from '../../views/Account'
 
