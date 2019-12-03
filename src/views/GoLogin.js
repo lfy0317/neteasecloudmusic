@@ -2,7 +2,7 @@ import React from 'react';
 import '../assets/css/login/gologin.scss';
 import {Link} from 'react-router-dom';
 import { connect } from 'react-redux';
-import {bindActionCreators} from 'redux'
+import {bindActionCreators} from 'redux';
 import actionCreator from '../store/actionCreator/login';
 import { Toast } from 'antd-mobile'
 

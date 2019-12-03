@@ -39,8 +39,6 @@ export default {
                                 type:'CHANGE_EXIST',
                                 payload:{
                                     exist:data.exist,
-                                    nickname:data.nickname,
-                                    hasPassword:data.hasPassword,
                                     phone,
                                 }
                             })
@@ -56,7 +54,6 @@ export default {
     login(Toast){
         const password = this.refs.password.state.value;
         let phone = this.props.phone;
-        console.log(password)
         return(dispatch)=>{
             this.$axios.get('/login/cellphone?phone='+phone+'&password='+password)
             .then(data=>{
@@ -66,6 +63,63 @@ export default {
             })
             .catch(()=>{
                 Toast.info("账号密码错误")
+            })
+        }
+    },
+    getLoginStatus(){
+        return (dispatch)=>{
+            this.$axios.get('/login/status')
+            .then((data)=>{
+                console.log(data.profile)
+                if(data.code === 200){
+                    dispatch({
+                        type:"CHANGE_LOGIN_STATUS",
+                        payload:{
+                            userId:data.profile.userId
+                        }
+                    });
+                    this.$axios.get('/user/detail?uid='+data.profile.userId)
+                    .then(data=>{
+                        dispatch({
+                            type:'CHANGE_USERINFO',
+                            payload:{
+                                userInfo:data
+                            }
+                        })
+                    }).catch(()=>{
+                        dispatch({
+                            type:"CHANGE_LOGIN_STATUS",
+                            payload:{
+                                userId:null
+                            }
+                        })
+                    })
+                }
+            }).catch(()=>{
+                dispatch({
+                    type:"CHANGE_LOGIN_STATUS",
+                    payload:{
+                        userId:null
+                    }
+                })
+            })
+        }
+    },
+    outLogin(){
+        return (dispatch)=>{
+            this.$axios.get('/logout').then(data=>{
+                if(data.code === 200){
+                    dispatch({
+                        type:'OUT_LOGIN',
+                        payload:{
+                            isAgree:false,
+                            phone:null,
+                            exist:0,
+                            userInfo:{},
+                            userId:null
+                        }
+                    })
+                }
             })
         }
     }

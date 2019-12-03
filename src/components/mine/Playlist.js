@@ -20,7 +20,7 @@ class Playlist extends React.Component{
                          <i className="iconfont icon-yinyue3"></i>
                     </dt>
                      <dd>
-                         <p>本地音乐</p>
+                         <p>最近播放</p>
                          <span>0<i className="iconfont icon-zuoyou1"></i></span>
                          
                      </dd>
@@ -30,7 +30,7 @@ class Playlist extends React.Component{
                          <i className="iconfont icon-yinyue3"></i>
                     </dt>
                      <dd>
-                         <p>本地音乐</p>
+                         <p>我的电台</p>
                          <span>0<i className="iconfont icon-zuoyou1"></i></span>
                          
                      </dd>
@@ -40,7 +40,7 @@ class Playlist extends React.Component{
                          <i className="iconfont icon-yinyue3"></i>
                     </dt>
                      <dd>
-                         <p>本地音乐</p>
+                         <p>我的收藏</p>
                          <span>0<i className="iconfont icon-zuoyou1"></i></span>
                          
                      </dd>
