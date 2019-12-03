@@ -1,7 +1,6 @@
 import React from 'react';
-import {BrowserRouter as Router,Route} from "react-router-dom"
 import "../assets/css/hotMusic/hotMusic.scss"
-import { Flex } from '_antd-mobile@2.3.1@antd-mobile';
+
 class HotMusic extends React.Component {
     constructor() {
         super();
@@ -26,8 +25,7 @@ class HotMusic extends React.Component {
                 <div className="hotList">
                     {
                         this.state.hotList.map((v,i) => (
-                            <div key={v.id}  >
-                                   
+                            <div key={v.id}>
                                 <h3> <span className="num">{i+1}</span> {v.name}</h3>
                                 <br/>
                                 <p className="detail"> 
@@ -38,7 +36,6 @@ class HotMusic extends React.Component {
                                     <Router-Link to={"/music"} >
                                     <i className="iconfont icon-iconfontbofang" style={{ fontSize: 25 }} ></i>
                                     </Router-Link>
-                                    
                                 </p>
                                 <hr/>
                             </div>
