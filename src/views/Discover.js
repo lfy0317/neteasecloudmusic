@@ -15,7 +15,7 @@ class Discover extends React.Component{
                         this.props.songSheet.map((v)=>(
                         <div key={v.id} style={{height:"1.6rem"}}>
                             
-                                <img src={v.picUrl} style={{width:"1.20rem"}}></img>
+                                <img src={v.picUrl}alt="加载中..." style={{width:"1.20rem"} }></img>
                                 <div style={{width:"1.24rem",height:"0.36rem",overflow:"hidden"}}>{v.name}</div>
                         </div>
                         ))
