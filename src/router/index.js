@@ -2,7 +2,8 @@ import React from 'react'
 import Home from '../views/Home';
 import GoLogin from '../views/GoLogin';
 import Login from '../views/Login';
-import Search from '../views/Search'
+import Search from '../views/Search';
+import Music from "../views/Music";
 export default[
     {
         name:'home',
@@ -24,6 +25,11 @@ export default[
         name:'search',
         to:'/search',
         component:Search
+    },
+    {
+        name:'music',
+        to:'/music',
+        component:Music
     },
     {
         name:'*',

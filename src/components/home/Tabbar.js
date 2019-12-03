@@ -28,7 +28,7 @@ class Tabbar extends React.Component {
               this.setState({
                 selectedTab: 'blueTab',
               });
-            }}><Discover></Discover>
+            }}><Discover router={this.props.router}></Discover>
           </TabBar.Item>
           <TabBar.Item
             icon={<i className='iconfont icon-iconfontttpodicon3'></i>}
