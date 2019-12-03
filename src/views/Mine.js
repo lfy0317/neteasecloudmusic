@@ -24,7 +24,7 @@ class Mine extends React.Component{
                     <Playlist></Playlist>
                 </div>
                 <div className="sunsheet">
-                    <Songsheet></Songsheet>
+                    <Songsheet router={this.props.router}></Songsheet>
                 </div>
             </div>
         )

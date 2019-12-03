@@ -70,7 +70,6 @@ export default {
         return (dispatch)=>{
             this.$axios.get('/login/status')
             .then((data)=>{
-                console.log(data.profile)
                 if(data.code === 200){
                     dispatch({
                         type:"CHANGE_LOGIN_STATUS",
