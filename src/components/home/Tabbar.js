@@ -51,7 +51,7 @@ class Tabbar extends React.Component {
                 selectedTab: 'greenTab',
               });
             }}
-          ><Mine></Mine>
+          ><Mine router={this.props.router}></Mine>
           </TabBar.Item>
           <TabBar.Item
             icon={<i className='iconfont icon-user2-copy'></i>}
