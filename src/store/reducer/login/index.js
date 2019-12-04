@@ -17,5 +17,6 @@ export default function(state = loginState,{type,payload}){
         state.userInfo = payload.userInfo;
         state.userId = payload.userId
     }
+    console.log(state.userInfo)
     return state;
 }

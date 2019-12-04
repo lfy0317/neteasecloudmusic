@@ -13,11 +13,9 @@ class HotMusic extends React.Component {
     render() {
         return (
             <div className="hotop">
-                <div className="hotopct">
-                    <img src="https://s3.music.126.net/mobile-new/img/hot_music_bg_2x.jpg?f01a252389c26bcf016816242eaa6aee=" alt="" />
-                    <div className="hoticon">
-
-                    </div>
+                <div className="hotopct" style={{display:'flex'}}>
+                    <img style={{width:'100%'}}
+                    src="https://s3.music.126.net/mobile-new/img/hot_music_bg_2x.jpg?f01a252389c26bcf016816242eaa6aee=" alt="" />
                     <div className="hottime">
                         更新日期：11月28日
                     </div>
