@@ -6,6 +6,11 @@ import HotMusic from '../../views/HotMusic';
 import Mine from '../../views/Mine';
 import Account from '../../views/Account'
 
+import { connect } from 'react-redux';
+import { bindActionCreators } from 'redux';
+import actionCreator from '../../store/actionCreator/mine';
+import Listdetail from '../../components/mine/Listdetail'
+
 class Tabbar extends React.Component {
   constructor(props) {
     super(props);
@@ -51,7 +56,10 @@ class Tabbar extends React.Component {
                 selectedTab: 'greenTab',
               });
             }}
-          ><Mine router={this.props.router}></Mine>
+          > 
+            {
+              this.props.toSinglelist?<Listdetail></Listdetail>:<Mine router={this.props.router}></Mine>
+            }
           </TabBar.Item>
           <TabBar.Item
             icon={<i className='iconfont icon-user2-copy'></i>}
@@ -71,4 +79,12 @@ class Tabbar extends React.Component {
   }
 }
 
-export default Tabbar
+function mapStateToProps({ mineState}) {
+  return {
+      toSinglelist:mineState.toSinglelist,//单个歌单，歌曲列表页开关（mine页面切换开关）
+  }
+}
+function mapDispatchToProps(dispatch) {
+  return bindActionCreators(actionCreator, dispatch)
+}
+export default connect(mapStateToProps, mapDispatchToProps)(Tabbar)

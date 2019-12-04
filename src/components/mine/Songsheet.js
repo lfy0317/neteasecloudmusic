@@ -1,6 +1,5 @@
 import React, { Fragment } from 'react';
 import '../../assets/css/mine/songsheet.scss';
-
 import { connect } from 'react-redux';
 import { bindActionCreators } from 'redux';
 import actionCreator from '../../store/actionCreator/mine';
@@ -62,9 +61,17 @@ class Songsheet extends React.Component {
                     </dl>
                     <dl className="manage_dl">
                         <dt><i className="iconfont icon-shuaxin1"></i></dt>
-                        <dd>删除</dd>
+                        <dd onClick={this.props.deleteSheeteject.bind()}>删除</dd>
                     </dl>
                 </div>
+                {/* 删除歌单 */}
+                    <div className="deleteSheet" style={{display:this.props.deleteEject?"block":"none"}}>
+                        <p>确定要删除此歌单吗?</p>
+                        <div className="deleteSure">
+                            <input type="button" className="deleteBtn" value="取消" onClick = {this.props.deleteSheet.bind(this, 0)}/>
+                            <input type="button" className="deleteBtn" value="确认" onClick = {this.props.deleteSheet.bind(this, 1)}/>
+                        </div>
+                    </div>
 
                 {/* 创建歌单 */}
                 <div className="creatSheet">
@@ -85,7 +92,7 @@ class Songsheet extends React.Component {
                 <div className="sheetList" style={{ display: this.props.show ? "block" : "none" }}>
                     {this.props.playlist ? this.props.playlist.map((v, index) => (
                         <Fragment key={index}>
-                            <dl className="sheetList_dl">
+                            <dl className="sheetList_dl" onClick={this.props.openSheetlist.bind(this,v.id)}>
                                 <dt>
                                     <img src={v.coverImgUrl} alt="加载中..." />
                                 </dt>
@@ -94,8 +101,8 @@ class Songsheet extends React.Component {
                                         <p>{v.name}</p>
                                         <span>{v.playCount}首</span>
                                     </div>
-                                    <div className="sheetSingle_right">
-                                        <i className="iconfont icon-dian" onClick={this.props.isSingle.bind(this, v.name)}></i>
+                                    <div className="sheetSingle_right" onClick={this.props.isSingle.bind(this, v.name,v.id)}>
+                                        <i className="iconfont icon-dian"></i>
                                     </div>
                                 </dd>
                             </dl>
@@ -109,7 +116,17 @@ class Songsheet extends React.Component {
         if (this.props.userId)
             this.props.sheetDisjunctor.call(this);
     }
-
+    // componentWillReceiveProps() {
+    //     if (this.props.userId)
+    //         this.props.sheetDisjunctor.call(this);
+    // }
+    // componentWillUpdate(){
+    //     if(this.props.userId){
+    //         this.setState({
+    //             uid:this.props.userId
+    //         })
+    //     }
+    // }
 }
 
 function mapStateToProps({ mineState, loginState }) {
@@ -117,11 +134,13 @@ function mapStateToProps({ mineState, loginState }) {
         userId: loginState.userId,
         playlist: mineState.playlist,
         sheetName: mineState.sheetName,
+        sheetId:mineState.sheetId,
         showBack: mineState.showBack,
         show: mineState.show,
         single: mineState.single,
         manage: mineState.manage,
         add: mineState.add,
+        deleteEject:mineState.deleteEject
 
     }
 }

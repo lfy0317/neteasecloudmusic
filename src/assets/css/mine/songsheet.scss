@@ -36,9 +36,8 @@
         }
     }
 
-    .sheetList {
+    .sheetList {//歌单列表
         display: block;
-
         .sheetList_dl {
             height: 0.46rem;
             margin-top: 0.1rem;
@@ -75,12 +74,15 @@
                 }
 
                 .sheetSingle_right {
-                    margin-right: 0.16rem;
+                    height:0.46rem;
+                    width:0.36rem;
+                    line-height: 0.46rem;
+                    margin-right: 0.14rem;
                 }
             }
         }
     }
-
+    //透明背景
     .eventBackground {
         width: 100%;
         height: 100%;
@@ -88,17 +90,17 @@
         top: 0;
         background: #000000;
         opacity: 0.5;
-        z-index: 99;
+        z-index: 999;
         display: none;
     }
 
-    .addModal {
+    .addModal {//添加弹窗
         width: 90%;
         height: 2rem;
         position: fixed;
         top: 30%;
         left: 5%;
-        z-index: 99;
+        z-index: 999;
         border-radius: 0.1rem;
         background: #fff;
         display: none;
@@ -142,13 +144,13 @@
             }
         }
     }
-    //歌单管理
+    //歌单管理弹窗（包括单个歌单管理）
     .sheetmanage,.singlemanage {
         width: 100%;
         height: 3rem;
         background: #ffffff;
         position: fixed;
-        z-index: 9999;
+        z-index: 999;
         bottom: -0.7rem;
         transition: bottom 0.6s;
         display: flex;
@@ -173,22 +175,52 @@
 
             dt {
                 margin-left: 8%;
-
                 i {
                     font-size: 0.24rem;
                     color: #000000;
                     font-weight: 300;
                 }
             }
-
             dd {
                 width: 80%;
                 line-height: 0.45rem;
                 margin-left: 5%;
-
                 text-align: start;
                 border-bottom: 1px solid #f3f3f3;
             }
         }
+    }
+    .deleteSheet{
+        display:block;
+        width:88%;
+        height:1.2rem;
+        background:#ffffff;
+        position: fixed;
+        top:40%;
+        z-index:999;
+        border-radius: 0.1rem;
+        left:6%;
+        p{
+            height:0.3rem;
+            line-height: 0.3rem;
+            margin:0.1rem 0.2rem;
+            text-align: start;
+            color:#a8a8a8;
+        }
+        .deleteSure{
+            display:flex;
+            justify-content: flex-end;
+            margin-top:0.3rem;
+            .deleteBtn{
+                width:0.6rem;
+                height:0.3rem;
+                margin-right: 0.2rem;
+                background: #fff;
+                border: none;
+                color: red;
+            }
+        }
+        
+
     }
 }
