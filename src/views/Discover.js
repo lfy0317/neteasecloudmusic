@@ -10,23 +10,23 @@ class Discover extends React.Component{
             
             <div>
                 <i className={"iconfont icon-fangdajing"}></i><input placeholder={"placeholder"} ></input>
-                <div style={{display:"flex",flexWrap:"wrap",justifycontent:"spacebetween"}}>
+                <div style={{display:"flex",flexWrap:"wrap",justifyContent:"spacearound",padding:"0 0.1rem 0 0.1rem"}}>
                     {
                         this.props.songSheet.map((v)=>(
                         <div key={v.id} style={{height:"1.6rem"}}>
-                            
-                                <img src={v.picUrl}alt="加载中..." style={{width:"1.20rem"} }></img>
-                                <div style={{width:"1.24rem",height:"0.36rem",overflow:"hidden"}}>{v.name}</div>
+                                <img src={v.picUrl}alt="加载中..." style={{width:"1.1rem"} }></img>
+                                <div style={{width:"1.14rem",height:"0.36rem",overflow:"hidden"}}>{v.name}</div>
                         </div>
                         ))
                     }
                 </div>
                 <div>
                     {this.props.newSong.map((v,i)=>(
-                        <div key={i}>
-                            <div style={{fontSize:"0.2rem"}} 
-                            onClick={()=>this.props.router.props.history.push({pathname:"/music",state:{id:v.id}})} >{v.name}</div>
-
+                        <div key={i} className='clear_fix' style={{dispaly:"flex",width:'100%',padding:"0 0.1rem 0 0.1rem"}}>
+                            <p style={{fontSize:'.2rem',float:'left'}} 
+                            onClick={()=>this.props.router.props.history.push({pathname:"/music",state:{id:v.id}})} >{v.name}
+                            </p>
+                            <i className={"iconfont icon-bofang"} style={{float:'right'}}></i>
                         </div>
                     ))}
                 </div>
