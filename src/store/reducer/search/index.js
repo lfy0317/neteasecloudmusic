@@ -5,6 +5,8 @@ export default function(state=searchState,{type,payload}){
         state.keyWords = payload.keyWords
     }else if(type === "CHANGE_HOT_SEARCH"){
         state.hotSearch = payload.hotSearch
+    }else if(type === 'CHANGE_SUGGESTLIST'){
+        state.suggestList = payload.suggestList
     }
     return state
 }

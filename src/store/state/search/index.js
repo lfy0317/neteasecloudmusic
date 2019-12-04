@@ -1,4 +1,5 @@
 export default{
     hotSearch:[],
-    keyWords:''
+    keyWords:'',
+    suggestList:[]
 }

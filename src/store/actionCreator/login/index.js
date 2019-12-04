@@ -77,7 +77,7 @@ export default {
                             userId:data.profile.userId
                         }
                     });
-                    this.$axios.get('/user/detail?uid='+data.profile.userId)
+                    this.$axios.get('/user/detail?uid='+this.props.userId)
                     .then(data=>{
                         dispatch({
                             type:'CHANGE_USERINFO',

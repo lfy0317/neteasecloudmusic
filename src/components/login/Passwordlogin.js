@@ -42,6 +42,7 @@ class Passwordlogin extends React.Component {
 }
 function mapStateToProps({ loginState }) {
     return {
+        uesrId:loginState.uesrId,
         phone:loginState.phone
     }
 }
