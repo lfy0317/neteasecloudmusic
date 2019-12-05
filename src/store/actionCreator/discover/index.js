@@ -1,20 +1,17 @@
 export default {
     getMusicList(){
         return async(dispatch)=>{
-            
-              const data= await this.$axios.get("/recommend/resource")
-            //   console.log(data.recommend)
+              const data= await this.$axios.get("/personalized?limit=6")
               dispatch({
                   type:"GET_MUSIC_LIST",
                   payload:{
-                        data:data.recommend
+                        data:data.result
                   }
               })
         }
     },
     getNewSong(){
         return async(dispatch)=>{
-            
             const data= await this.$axios.get("/top/song?type=0")
             // console.log(data)
             dispatch({
@@ -23,8 +20,7 @@ export default {
                     data:data.data
                 }
             })
-      }
-
+        }
     },
     getMusic(id){
         return async(dispatch)=>{
@@ -37,13 +33,6 @@ export default {
                     data:data.data
                 }
             })
-      }
-
-
-    }
-
-
-
-
-    
+        }
+    } 
 }

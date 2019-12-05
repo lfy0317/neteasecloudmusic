@@ -8,6 +8,5 @@ export default function(state = discoverState,{type,payload}){
     }else if(type === "GET_MUSIC"){
         state.music=payload.data
     }
-
     return state;
 }

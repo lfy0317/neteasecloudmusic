@@ -49,7 +49,6 @@ class HotMusic extends React.Component {
                 hotList: data.dailySongs,
                 id:data.dailySongs.id
             })
-            
         })
     }
     componentDidMount() {
