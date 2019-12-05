@@ -9,6 +9,7 @@ export default {
         single:false ,//单个歌单管理开关
         deleteEject:false,//删除确认弹框开关
         toSinglelist:false,//单个歌单，歌曲列表页开关
+        // toSinglelist:true,//单个歌单，歌曲列表页开关
         // tracks:tracks,//单个歌单，歌曲信息
 
 }
