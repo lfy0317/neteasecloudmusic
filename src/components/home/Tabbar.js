@@ -44,7 +44,7 @@ class Tabbar extends React.Component {
               this.setState({
                 selectedTab: 'redTab',
               });
-            }}><HotMusic></HotMusic>
+            }}><HotMusic router={this.props.router}></HotMusic>
           </TabBar.Item>
           <TabBar.Item
             icon={<i className='iconfont icon-yinyue1'></i>}
